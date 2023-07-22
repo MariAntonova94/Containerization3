@@ -11,7 +11,7 @@
 
 1) Для запуска контейнера с БД другого типа, отличного от MariaDB, нам потребуется найти образ данной БД на сайте https://hub.docker.com/. Предположим, мы хотим использовать PostgreSQL. Для этого мы можем найти Docker-образ PostgreSQL в репозитории Docker Hub, используя запрос "PostgreSQL" в строке поиска.
 
-![lxc version](https://github.com/MariAntonova94/Containerization2/blob/main/file/1.png)
+![lxc version](https://github.com/MariAntonova94/Containerization3/blob/main/file/1.png)
 
 2) При запуске контейнера мы можем передать переменную окружения с желаемым hostname из командной строки или через Dockerfile. Для примера, для передачи hostname=mysystemhostname, мы можем использовать команду запуска контейнера следующим образом:
 
@@ -20,7 +20,7 @@ docker run -e "hostname=mysystemhostname" --name mydatabase -d postgres
 ```
 В этом случае, при запуске контейнера с образом PostgreSQL, мы передаем значение переменной окружения "hostname" в контейнер.
 
-![lxc version](https://github.com/MariAntonova94/Containerization2/blob/main/file/2.png)
+![lxc version](https://github.com/MariAntonova94/Containerization3/blob/main/file/2.png)
 
 3) Для заполнения БД данными через консоль, мы можем использовать команду `psql` внутри контейнера, которая предоставляет доступ к консоли PostgreSQL. Например, мы можем использовать следующую команду, чтобы подключиться к нашей БД и выполнить SQL-запрос:
 
